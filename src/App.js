@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Simulator from './hoc/Simulator/Simulator.js';
+import Deckbuilder from './hoc/Deckbuilder/Deckbuilder.js';
+import testPool from './examplePool.js'
+import Menubar from './components/Menubar/Menubar.js';
+
+console.log(testPool)
 
 function App() {
+  // <Deckbuilder cards={testPool} />
+  // return  <div className="App"><Simulator /></div>
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menubar />
+      <Simulator />
     </div>
   );
 }

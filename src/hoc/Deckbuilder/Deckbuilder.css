@@ -1,0 +1,21 @@
+.Deckbuilder {
+  width: 100vw;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  margin: auto;
+}
+
+.Deckbuilder-deck {
+  background-color: #ebb;
+}
+
+.Deckbuilder-section {
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.Deckbuilder-large {
+  font-size: 30px;
+}

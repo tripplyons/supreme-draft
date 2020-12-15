@@ -1,0 +1,20 @@
+.SupremeDraft {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  margin: auto;
+}
+
+.PackArea {
+  background-color: #ebb;
+}
+
+.panel-area {
+  font-size: 16px;
+  padding: 10px;
+}
+
+
+.Draft-large {
+  font-size: 30px;
+}

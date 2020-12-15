@@ -1,0 +1,10 @@
+.Menubar {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+.Menubar > a:link, .Menubar > a:visited, .Menubar > a:hover, .Menubar > a:active {
+  color: #00ccff
+}

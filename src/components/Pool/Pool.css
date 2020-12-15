@@ -1,0 +1,12 @@
+.Pool {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Pool-col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 190px;
+}
