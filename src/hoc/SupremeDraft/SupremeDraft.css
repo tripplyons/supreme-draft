@@ -6,7 +6,14 @@
 }
 
 .PackArea {
-  background-color: #ebb;
+  background-color: #eee;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.5) inset;
+}
+
+.PoolArea {
+  background-color: #ccc;
+  border-radius: 20px;
+  margin: 20px;
 }
 
 .panel-area {

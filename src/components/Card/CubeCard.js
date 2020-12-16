@@ -16,7 +16,7 @@ class CubeCard extends React.Component {
   componentWillMount() {
     this.setState({
       set: 'CUBE',
-      imagePath: process.env.PUBLIC_URL + '/newimg/' + btoa(this.state.name.split(' // ')[0]) + '.png'
+      imagePath: process.env.PUBLIC_URL + '/img/' + btoa(this.state.name.split(' // ')[0]) + '.png'
     })
   }
 

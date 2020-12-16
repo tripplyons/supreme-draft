@@ -29,7 +29,7 @@ class Pool extends React.Component {
             <div className="Pool-col column-mode" key={index}>
               {
                 this.props.cards.filter(card => cmcs.includes(card.cmc)).map((card, index2) =>
-                  <CubeCard key={index2} name={card.name} onClick={e => this.props.onClick(card.name)}/>
+                  <CubeCard key={card.name} name={card.name} onClick={e => this.props.onClick(card.name)}/>
                 )
               }
             </div>

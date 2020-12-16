@@ -15,7 +15,7 @@ class SupremeDraft extends React.Component {
   }
 
   componentDidMount() {
-    api.generateCubePacks(18).then(packs => {
+    api.generateCubePacks(this.props.packs).then(packs => {
       this.setState({
         packs: packs
       })
