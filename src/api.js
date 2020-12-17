@@ -77,7 +77,7 @@ export async function getLatestCard(cardName) {
 }
 
 export async function generateCubePacks(number) {
-  let cubeFile = await (await fetch(process.env.PUBLIC_URL + '/data/MtgoVintageCube.txt')).text()
+  let cubeFile = await (await fetch(process.env.PUBLIC_URL + '/data/MTGOVintageCube.txt')).text()
   let data = await (await fetch(process.env.PUBLIC_URL + '/data/cube.json')).json()
 
   // console.log(cubeFile)
@@ -86,14 +86,18 @@ export async function generateCubePacks(number) {
 
   for (let i = 0; i < number; i++) {
     packs.push([])
+    let removed = []
     for (let j = 0; j < 15; j++) {
       let chosenIndex = Math.floor(Math.random() * cards.length)
       let name = cards[chosenIndex]
       // let set = await getLatestSet(name)
       // packs[i].push(await getLatestCard(name))
       packs[i].push(data[name])
+      removed.push(name)
       cards.splice(chosenIndex, 1)
     }
+    // put the cards back in the cube
+    cards = [...cards, ...removed]
   }
 
   return packs

@@ -1,9 +1,8 @@
 var fetch = require('node-fetch');
 var fs = require('fs');
 
-let cards = [
-  'Plains', 'Island', 'Swamp', 'Mountain', 'Forest'
-]//fs.readFileSync('public/data/MtgoVintageCube.txt', {encoding:'utf8'}).split('\n').filter(card=>card)
+let cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
+// fs.readFileSync('public/data/MTGOVintageCube.txt', {encoding:'utf8'}).split('\n').filter(card=>card)
 
 let result = {}
 
@@ -17,11 +16,11 @@ async function main() {
     let imagePath = (scryfall.card_faces && scryfall.card_faces[0].image_uris) ? scryfall.card_faces[0].image_uris.normal : scryfall.image_uris.normal
     let imgRes = await fetch(imagePath)
     let img = await imgRes.buffer()
-    let cardNameBase64 = Buffer.from(card).toString('base64')
+    let cardNameBase64 = Buffer.from(card.split(' // ')[0]).toString('base64')
     fs.writeFileSync(`public/img/${cardNameBase64}.png`, img)
   }
 
-  // fs.writeFileSync('public/data/basics.json', JSON.stringify(result))
+  // fs.writeFileSync('public/data/cube.json', JSON.stringify(result))
 }
 
 main()
